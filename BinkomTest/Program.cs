@@ -6,6 +6,25 @@ namespace BinkomTest
     {
         public static void Main(string[] args)
         {
+            Person();
+            Console.WriteLine();
+
+            IsEven(25);  //prints Odd
+            Console.WriteLine();
+
+            PrintNumbers();
+            Console.WriteLine();
+
+            IntArray();
+            Console.WriteLine();
+
+            Greet("Alice");
+            Console.WriteLine();
+
+        }
+
+        public static void Person()
+        {
             string name = "John Doe";
             int age = 25;
             bool isAdmin = true;
@@ -13,15 +32,6 @@ namespace BinkomTest
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Admin: " + isAdmin);
-
-            IsEven(25);  //prints Odd
-
-            PrintNumbers();
-
-            Array();
-
-            Greet("Alice");
-            
         }
 
         public static void IsEven(int number)
@@ -38,19 +48,25 @@ namespace BinkomTest
 
         public static void PrintNumbers()
         {
+            Console.WriteLine("Print numbers 1-10");
             for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine(i);
             }
         }
 
-        public static void Array()
+        
+        public static void IntArray()
         {
-            int[] evenNumbers = new int[5] { 2, 4, 6, 8, 10 };
-            foreach (int number in evenNumbers)
+            int[] numbers = new int[5] { 2, 4, 6, 8, 10 };
+
+            foreach (int element in numbers)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(element);
             }
+
+            var sumElements = numbers.Sum();
+            Console.WriteLine("Sum of elements = " + sumElements);
         }
 
         public static void Greet(string name)
